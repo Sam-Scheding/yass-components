@@ -1,0 +1,14 @@
+<!-- preview-head.html: Overrides content of preview IFRAME HTML page's <head> tag, affecting rendered component(s) below Canvas and Docs tabs. -->
+<!-- Link tag that points to Roboto font resolves to src/assets/fonts/ folder based on start command defined with '-s src/assets' parameter in package.json. -->
+<link rel="stylesheet" href="fonts/Roboto/Roboto.css">
+<style>
+  @font-face {
+    font-family: "Inter";
+    src: local("Inter"),
+    url("fonts/Inter-Medium.ttf") format("truetype");
+  }
+
+  :root {
+    font-family: Inter, sans-serif;
+  }
+</style>
