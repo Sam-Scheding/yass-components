@@ -1,14 +1,16 @@
+// @ts-ignore
+import { classNames } from "yass-css";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Text, { tags, appearance, fontWeight, fontSize } from "./index";
+import Text, { tags } from "./index";
 
 export default {
   title: "Text",
   component: Text,
   argTypes: {
     children: { control: "text" },
-    appearance: {
-      options: appearance,
+    color: {
+      options: classNames["color"],
       control: { type: "radio" },
     },
     as: {
@@ -16,11 +18,11 @@ export default {
       control: { type: "radio" },
     },
     fontWeight: {
-      options: fontWeight,
+      options: classNames["font-weight"],
       control: { type: "radio" },
     },
     fontSize: {
-      options: fontSize,
+      options: classNames["font-size"],
       control: { type: "radio" },
     },
   },
@@ -31,8 +33,8 @@ const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   as: "span",
-  appearance: "neutral",
-  fontWeight: "normal",
-  fontSize: "10",
-  children: "This is some text rendered as a span",
+  color: "color:neutral",
+  fontWeight: "font-weight:normal",
+  fontSize: "font-size:10",
+  children: "This is some text content",
 };
