@@ -11,19 +11,19 @@ export default {
     children: { control: "text" },
     color: {
       options: classNames["color"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
     as: {
       options: tags,
-      control: { type: "radio" },
+      control: { type: "select" },
     },
     fontWeight: {
       options: classNames["font-weight"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
     fontSize: {
       options: classNames["font-size"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
   },
 } as ComponentMeta<typeof Text>;
