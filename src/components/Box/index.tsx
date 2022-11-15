@@ -8,7 +8,7 @@ export interface BoxProps {
   id?: string;
   testId?: string;
   children?: ReactNode;
-  as: typeof tags[number];
+  as?: typeof tags[number];
   position?: typeof classNames["position"][number];
   padding?: typeof classNames["padding"][number];
   paddingBlock?: typeof classNames["padding-block"][number];
