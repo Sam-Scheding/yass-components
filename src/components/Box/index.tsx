@@ -9,6 +9,7 @@ export interface BoxProps {
   testId?: string;
   children?: ReactNode;
   as?: typeof tags[number];
+  display?: typeof classNames["display"][number];
   position?: typeof classNames["position"][number];
   padding?: typeof classNames["padding"][number];
   paddingBlock?: typeof classNames["padding-block"][number];
@@ -18,6 +19,7 @@ export interface BoxProps {
   borderColor?: typeof classNames["border-color"][number];
   borderStyle?: typeof classNames["border-style"][number];
   borderRadius?: typeof classNames["border-radius"][number];
+  color?: typeof classNames["color"][number];
   overflow?: typeof classNames["overflow"];
   opacity?: typeof classNames["opacity"];
   zIndex?: typeof classNames["z-index"];
@@ -35,6 +37,8 @@ const Box = ({
   borderColor,
   borderStyle,
   borderRadius,
+  color,
+  display,
   overflow,
   opacity,
   zIndex,
@@ -57,6 +61,8 @@ const Box = ({
         borderColor,
         borderStyle,
         borderRadius,
+        color,
+        display,
         overflow,
         opacity,
         zIndex,

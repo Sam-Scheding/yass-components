@@ -11,6 +11,8 @@ export interface TextProps {
   fontWeight?: typeof classNames["font-weight"][number];
   fontSize?: typeof classNames["font-size"][number];
   textDecoration?: typeof classNames["text-decoration"][number];
+  textAlign?: typeof classNames["text-align"][number];
+  verticalAlign?: typeof classNames["vertical-align"][number];
   testId?: string;
   children?: ReactNode;
 }
@@ -19,10 +21,12 @@ const Text = ({
   children,
   id,
   as = "span",
-  color = "color:neutral",
+  color = "color:text",
   fontWeight = "font-weight:normal",
-  fontSize = "font-size:10",
-  textDecoration = "text-decoration:initial",
+  fontSize = "font-size:9",
+  textDecoration,
+  textAlign,
+  verticalAlign,
   testId,
 }: TextProps) => {
   const Component = as;
@@ -32,7 +36,14 @@ const Text = ({
     <Component
       id={id}
       data-testid={testId}
-      className={[color, fontWeight, fontSize, textDecoration].join(" ")}
+      className={[
+        color,
+        fontWeight,
+        fontSize,
+        textDecoration,
+        textAlign,
+        verticalAlign,
+      ].join(" ")}
     >
       {children}
     </Component>

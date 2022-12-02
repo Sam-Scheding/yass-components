@@ -15,13 +15,13 @@ type Variant =
 const baseStyles = `
   border-radius:3
   border-style:solid
-  border-width:10
 `;
 
 const sizes = (size: Size) => {
   return `
     padding-inline:button-${size}
     padding-block:button-${size}
+    font-size:button-${size}
   `;
 };
 
